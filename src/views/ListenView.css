@@ -1,0 +1,18 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.loader {
+  margin: auto;
+}
+
+@media (max-width: 575.98px) {
+  .flex-container {
+    height: 80vh;
+  }
+}
