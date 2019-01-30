@@ -60,31 +60,6 @@ class App extends React.Component {
               animationOutDelay={11000}
               isVisible={this.state.isVisible}
             />
-
-            {/* <Route exact path="/" render={({location}) => (
-                <StaticView
-                  animationInDelay={5000}
-                  animationOutDelay={8000}
-                  isVisible={isVisible}
-                />
-              )}
-            />
-            <Route path="/typing" render={({location}) => (
-                <TypingView
-                  animationInDelay={10000}
-                  animationOutDelay={14000}
-                  isVisible={isVisible}
-                />
-              )} 
-            />
-            <Route path="/listen" render={({location}) => (
-                <ListenView 
-                  animationInDelay={12000}
-                  animationOutDelay={16000}
-                  isVisible={isVisible}
-                />
-              )} 
-            /> */}
           </Switch>
         </div>
       </BrowserRouter>

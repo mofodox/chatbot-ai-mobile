@@ -8,17 +8,24 @@
 
 @media (max-width: 575.98px) {
   .flex-container {
-    height: 80vh;
+    height: 85vh;
   }
 
-  .loader-block {
-    height: 2
-  }
+  .text-message-typing {
+    flex: 1;
 
-  .message-text-animation {
     padding-left: 16px;
     padding-right: 16px;
-    height: 232px;
+    padding-top: 16px;
     font-size: 22px;
+  }
+
+  .loader-typing {
+    margin-top: 56px;
+  }
+
+  .action-button-typing {
+    flex: 1;
+    margin-top: 88px;
   }
 }

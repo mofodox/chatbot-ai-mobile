@@ -7,12 +7,18 @@
   height: 100vh;
 }
 
-.loader {
-  margin: auto;
-}
-
 @media (max-width: 575.98px) {
   .flex-container {
-    height: 80vh;
+    height: 85vh;
+  }
+
+  .loader-listen {
+    flex: 1;
+    margin-top: 188px;
+  }
+
+  .action-button-listen {
+    flex: 1;
+    margin-top: 124px;
   }
 }

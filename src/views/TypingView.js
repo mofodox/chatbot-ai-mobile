@@ -30,17 +30,19 @@ class TypingView extends React.Component {
       return (
         <MobileView>
           <div className="flex-container">
-            <TextyAnim
-              type="left"
-              mode="smooth"
-              duration={550}
-              delay={2000}
-              split={this.getSplit}
-              className="message-text-animation"
-            >
-              {`This is the largest continuous structure associated with the planets.`}
-            </TextyAnim>
-            <div className="loader-block">
+            <div className="text-message-typing">
+              <TextyAnim
+                type="left"
+                mode="smooth"
+                duration={550}
+                delay={2000}
+                split={this.getSplit}
+                className="message-text-animation"
+              >
+                {`This is the largest continuous structure associated with the planets.`}
+              </TextyAnim>
+            </div>
+            <div className="loader-typing">
               <Animated
                 animationIn='fadeIn'
                 animationInDelay={this.props.animationInDelay} // 1600
@@ -53,32 +55,33 @@ class TypingView extends React.Component {
                 />
               </Animated>
             </div>
-
-            <Animated
-              animationIn={`fadeInUp`}
-              animationInDelay={4500} // 4500
-              animationOut={ `fadeOutDown` }
-              animationOutDelay={ 5000 }
-              isVisible={this.props.isVisible}
-            >
-              <Link className="btn btn-light mt-4" to="/listen">
-                Continue <span role='img' aria-label="arrow">➡</span>
-              </Link>
-            </Animated>
+            <div className="action-button-typing">
+              <Animated
+                animationIn={`fadeInUp`}
+                animationInDelay={4500} // 4500
+                animationOut={`fadeOutDown`}
+                animationOutDelay={5000}
+                isVisible={this.props.isVisible}
+              >
+                <Link className="btn btn-light mt-4" to="/listen">
+                  Continue <span role='img' aria-label="arrow">➡</span>
+                </Link>
+              </Animated>
+            </div>
           </div>
         </MobileView>
       )
     }
 
-    return (
-      <div className="flex-container">
-        <div className="message-text text-center">
-          <p>The content is unavailable on the browser. Please use your smartphone to view the content, thank you! <span role="img" aria-label="hand">✌️</span></p>
-        </div>
+    // return (
+    //   <div className="flex-container">
+    //     <div className="message-text text-center">
+    //       <p>The content is unavailable on the browser. Please use your smartphone to view the content, thank you! <span role="img" aria-label="hand">✌️</span></p>
+    //     </div>
 
-        <p className="small text-black-50">You're staring at this blank page from this URL: {`${this.props.location.pathname}`}.</p>
-      </div>
-    )
+    //     <p className="small text-black-50">You're staring at this blank page from this URL: {`${this.props.location.pathname}`}.</p>
+    //   </div>
+    // )
   }
 
   render() {

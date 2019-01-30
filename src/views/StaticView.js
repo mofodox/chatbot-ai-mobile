@@ -13,7 +13,7 @@ class StaticView extends React.Component {
       return (
         <MobileView>
           <div className="flex-container">
-            <div className="loader">
+            <div className="loader-static">
               <Animated
                 animationIn={'fadeIn'}
                 animationInDelay={this.props.animationInDelay}
@@ -24,28 +24,30 @@ class StaticView extends React.Component {
               </Animated>
             </div>
 
-            <Animated
-              animationIn={`fadeInUp`}
-              animationInDelay={1500}
-            >
-              <Link className="btn btn-light" to="/typing">
-                Start <span role="img" aria-label="run">🏃🏻</span>‍
-            </Link>
-            </Animated>
+            <div className="action-button-static">
+              <Animated
+                animationIn={`fadeInUp`}
+                animationInDelay={1500}
+              >
+                <Link className="btn btn-light" to="/typing">
+                  Start <span role="img" aria-label="run">🏃🏻</span>‍
+                </Link>
+              </Animated>
+            </div>
           </div>
         </MobileView>
       )
     }
 
-    return (
-      <div className="flex-container">
-        <div className="message-text text-center">
-          <p>The content is unavailable on the browser. Please use your smartphone to view the content, thank you! <span role="img" aria-label="hand">✌️</span></p>
-        </div>
+    // return (
+    //   <div className="flex-container">
+    //     <div className="message-text text-center">
+    //       <p>The content is unavailable on the browser. Please use your smartphone to view the content, thank you! <span role="img" aria-label="hand">✌️</span></p>
+    //     </div>
 
-        <p className="small text-black-50">You're staring at this blank page from this URL: {`${this.props.location.pathname}`}.</p>
-      </div>
-    )
+    //     <p className="small text-black-50">You're staring at this blank page from this URL: {`${this.props.location.pathname}`}.</p>
+    //   </div>
+    // )
   }
 
   render() {

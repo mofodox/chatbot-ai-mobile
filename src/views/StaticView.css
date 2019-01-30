@@ -17,6 +17,15 @@
 
 @media (max-width: 575.98px) {
   .flex-container {
-    height: 80vh;
+    height: 85vh;
+  }
+
+  .loader-static {
+    margin-top: 202px;
+  }
+
+  .action-button-static {
+    flex: 1;
+    margin-top: 116px;
   }
 }
